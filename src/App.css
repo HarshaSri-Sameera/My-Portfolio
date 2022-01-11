@@ -1,0 +1,72 @@
+
+.h1 {
+  font-size: 50px;
+}
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Lato', sans-serif;
+}
+.icon {
+  height: 100px;
+  width: 100px;
+  background-color: #28a745;
+  border-radius: 50%;
+  border-radius: 50%;
+  transition: border-radius 0.5s, transform 0.5s, height 0.5s, width 0.5s, background-color 0.2s;
+  transition: border-radius 0.5s, transform 0.5s, height 0.5s, width 0.5s, background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon .first {
+  color: white;
+  font-weight: 700;
+  font-size: 17px;
+  text-align: center;
+}
+.icon .second {
+  display: none;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "square1 square2" "square3 square4";
+}
+.icon .second div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(180deg);
+}
+.icon .second div a {
+  color:#28a745;
+  text-decoration: none;
+}
+.icon .second .square-1 {
+  grid-area: square1;
+}
+.icon .second .square-2 {
+  grid-area: square2;
+}
+.icon .second .square-3 {
+  grid-area: square3;
+}
+.icon .second .square-4 {
+  grid-area: square4;
+}
+.icon:hover {
+  height: 200px;
+  width: 200px;
+  border-radius: 0;
+  transform: rotate(180deg);
+  background-color: black;
+  border: 5px solid #28a745;
+}
+.icon:hover .first {
+  display: none;
+}
+.icon:hover .second {
+  display: grid;
+}
