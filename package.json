@@ -51,5 +51,9 @@
   "devDependencies": {
     "@types/react": "^18.0.9",
     "@types/react-router-dom": "^5.3.3"
+  },
+  "engines" : { 
+    "npm" : "8.1.2",
+    "node" : "16.13.2"
   }
 }
