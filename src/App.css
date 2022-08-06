@@ -11,7 +11,7 @@
 .icon {
   height: 100px;
   width: 100px;
-  background-color: #28a745;
+  background-color: #0b867c;
   border-radius: 50%;
   border-radius: 50%;
   transition: border-radius 0.5s, transform 0.5s, height 0.5s, width 0.5s, background-color 0.2s;
@@ -41,7 +41,7 @@
   transform: rotate(180deg);
 }
 .icon .second div a {
-  color:#28a745;
+  color:#0b867c;
   text-decoration: none;
 }
 .icon .second .square-1 {
@@ -62,7 +62,7 @@
   border-radius: 0;
   transform: rotate(180deg);
   background-color: black;
-  border: 5px solid #28a745;
+  border: 5px solid #0b867c;
 }
 .icon:hover .first {
   display: none;
@@ -70,3 +70,66 @@
 .icon:hover .second {
   display: grid;
 }
+
+.card-height {
+  height: 9rem;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.nav-style {
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+.markdown img{
+  display: block;
+  max-width:100%;
+  height: auto;
+}
+
+.separator:last-of-type, .fullscreen, .side-by-side, .preview {
+  display: none !important;
+}
+ 
+/* theme color */
+.text-successs {
+  color: #0b867c;
+}
+
+/* typo */
+#auto-type-text  {
+  color:#0b867c;
+  font-size:2em;
+  text-align:center;
+  /* min-height: 0px; */
+  /* padding: 0px;
+  padding-top:0px; */
+ }
+
+ .typed-cursor {
+  display:none;
+}
+
+.text-container {
+  /*   height:150px; */
+  /*   width:800px; */
+    display:block;
+    position:absolute;
+    color:#333;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    /* margin:auto; */
+    /* background-color:white; */
+  }
+  
