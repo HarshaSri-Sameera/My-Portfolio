@@ -5,6 +5,14 @@ import project3 from "./assets/project3.png";
 import blog1 from "./assets/blog1.png";
 import blog2 from "./assets/blog2.png";
 import blog3 from "./assets/blog3.png";
+import html from "./assets/html.png";
+import css from "./assets/css.png";
+import js from "./assets/js.png";
+import bootstrap from "./assets/bootstrap.png";
+import python from "./assets/python.png";
+import flask from "./assets/flask.png";
+import react from "./assets/react.png";
+import java from "./assets/java.png";
 import axios from 'axios'; // To send the http requests to the server
 
 const Context = React.createContext();
@@ -16,6 +24,7 @@ export class Provider extends Component {
     //     });
     // };
     handler = (action, newObject) => {
+        // eslint-disable-next-line default-case
         switch(action) {
             case "ADD_PROJECT":
                 this.setState({
@@ -98,56 +107,56 @@ export class Provider extends Component {
             {
                 id:1,
                 name: "HTML5",
-                imageUrl: "https://github.com/HarshaSri-Sameera/pictures/blob/main/html.png?raw=true",
+                imageUrl: html,
                 starTotal: 3,
                 starActive: 2,
             },
             {
                 id:2,
                 name: "CSS3",
-                imageUrl: "https://github.com/HarshaSri-Sameera/pictures/blob/main/CSS.png?raw=true",
+                imageUrl: css,
                 starTotal: 3,
                 starActive: 3,
             },
             {
                 id:3,
                 name: "JavaScript",
-                imageUrl: "https://github.com/HarshaSri-Sameera/pictures/blob/main/JS.png?raw=true",
+                imageUrl: js,
                 starTotal: 3,
                 starActive: 2,
             },
             {
                 id:4,
                 name: "Bootstrap 4",
-                imageUrl: "https://github.com/HarshaSri-Sameera/pictures/blob/main/bs4.png?raw=true",
+                imageUrl: bootstrap,
                 starTotal: 3,
                 starActive: 3,
             },
             {
                 id:5,
                 name: "Python",
-                imageUrl: "https://github.com/HarshaSri-Sameera/pictures/blob/main/python.png?raw=true",
+                imageUrl: python,
                 starTotal: 3,
                 starActive: 3,
             },
             {
                 id:6,
                 name: "Flask",
-                imageUrl: "https://github.com/HarshaSri-Sameera/pictures/blob/main/flask.png?raw=true",
+                imageUrl: flask,
                 starTotal: 3,
                 starActive: 2,
             },
             {
                 id:7,
                 name: "React",
-                imageUrl: "https://github.com/HarshaSri-Sameera/pictures/blob/main/react.png?raw=true",
+                imageUrl: react,
                 starTotal: 3,
                 starActive: 2,
             },
             {
                 id:8,
                 name: "Java",
-                imageUrl: "https://github.com/HarshaSri-Sameera/pictures/blob/main/java.jpg?raw=true",
+                imageUrl: java,
                 starTotal: 3,
                 starActive: 2,
             },

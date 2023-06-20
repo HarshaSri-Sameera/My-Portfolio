@@ -27,8 +27,6 @@ function Tittle(props) {
                     </div>
                     <h4 className="font-weight-light">{tag}</h4>
                 </div> 
-                
-                
             </div>
         </div>
     );

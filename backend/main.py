@@ -6,39 +6,39 @@ import logging
 app = Flask(__name__)
 CORS(app)
 
-# db = pymysql.connect(host="localhost", user="root", password="12340987", db="portfolio_website", autocommit=True)
+db = pymysql.connect(host="localhost", user="root", password="12340987", db="portfolio_website", autocommit=True)
 # db.commit() # By setting autocommit as True we can ignore this
 
-@app.route("/api/recommendations", methods=["GET"])
-def get_recommendation():
-    try:
-        db = pymysql.connect(
-            host="localhost", user="root", password="12340987", db="portfolio_website", autocommit=True
-        )
-        cursor = db.cursor()
-        query = "select * from recommendations where onShowcase=True;"
-        cursor.execute(query)
+# @app.route("/api/recommendations", methods=["GET"])
+# def get_recommendation():
+#     try:
+#         db = pymysql.connect(
+#             host="localhost", user="root", password="12340987", db="portfolio_website", autocommit=True
+#         )
+#         cursor = db.cursor()
+#         query = "select * from recommendations where onShowcase=True;"
+#         cursor.execute(query)
         
-        recommendations = cursor.fetchall()
+#         recommendations = cursor.fetchall()
         
-        results = []
-        for recommendation in recommendations:
-            recom_object = {
-                "id" : recommendation[0],
-                "name" : recommendation[1],
-                "company" : recommendation[3],
-                "designation" : recommendation[4],
-                "recommendation" : recommendation[5],
-            }
-            results.append(recom_object)
-        # print(results)
+#         results = []
+#         for recommendation in recommendations:
+#             recom_object = {
+#                 "id" : recommendation[0],
+#                 "name" : recommendation[1],
+#                 "company" : recommendation[3],
+#                 "designation" : recommendation[4],
+#                 "recommendation" : recommendation[5],
+#             }
+#             results.append(recom_object)
+#         # print(results)
         
-        cursor.close()
-        db.close()
-        return {"isSuccessful": True, "results": results}
-    except Exception as e:
-        logging.error(e)
-        return {"isSuccessful": False, "results": []}
+#         cursor.close()
+#         db.close()
+#         return {"isSuccessful": True, "results": results}
+#     except Exception as e:
+#         logging.error(e)
+#         return {"isSuccessful": False, "results": []}
     
 # @app.route("/api/skills", methods=["GET", "POST"])
 # def get_skills():
@@ -70,12 +70,12 @@ def get_recommendation():
 
 # Dummy
 
-# @app.route("/", methods=["GET"])
-# def home():
-#     cursor = db.cursor()
-#     cmd = "describe projects;"
-#     cursor.execute(cmd)
-#     tables = cursor.fetchall()   # fetch all the data and store it in variable
-#     print(tables)
+@app.route("/", methods=["GET"])
+def home():
+    cursor = db.cursor()
+    cmd = "show tables;"
+    cursor.execute(cmd)
+    tables = cursor.fetchall()   # fetch all the data and store it in variable
+    print(tables)
     
-#     return "Hello Porsche!"
+    return "Hello Sameera!"
